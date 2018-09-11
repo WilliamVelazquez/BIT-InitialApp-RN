@@ -1,5 +1,14 @@
 function data(state={}, action){
-	return state;
+  switch(action.type){
+    case '':{
+      return {...state, ...action.payload}
+    }
+    case '':{
+
+    }
+    default:
+      return state;
+  }
 }
 
 export default data;
