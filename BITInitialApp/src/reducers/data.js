@@ -1,10 +1,10 @@
 function data(state={}, action){
   switch(action.type){
-    case '':{
+    case 'Test1':{
       return {...state, ...action.payload}
     }
-    case '':{
-
+    case 'Test2':{
+    	return {}
     }
     default:
       return state;
