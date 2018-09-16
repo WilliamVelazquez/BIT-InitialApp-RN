@@ -15,7 +15,6 @@ const Main = createStackNavigator(
   {
     Home,//Home:Home
     Phase1
-    //Category
   },
   {
     //initialRouteName: 'Home',
@@ -50,8 +49,7 @@ const TabNavigator = createBottomTabNavigator(
   {
     tabBarOptions: {
       activeTintColor: 'white',
-      activeBackgroundColor: '#299EAF'
-      //activeBackgroundColor: '#65A721'
+      activeBackgroundColor: '#5c9fd6'
     },
     initialRouteName: 'Main'
   }
