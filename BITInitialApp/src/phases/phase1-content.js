@@ -11,9 +11,6 @@ import {
 function Phase1Content(props) {
 	return(
 		<View style={styles.container}>
-			<Text style={[styles.text,styles.description]}>
-				Analizaremos la factibilidad y viabilidad de tu nuevo proyecto mediante una serie de preguntas y con base en estrategias financieras definidas que te ayudarán a conocer mejorar tu proyecto!
-			</Text>
 			<Text style={[styles.text,styles.question]}>¿Cuentas con el cálculo de tu Inversión Inicial?</Text>
 			<View style={styles.duoBtnContainer}>
 				<TouchableOpacity

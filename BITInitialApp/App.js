@@ -3,8 +3,10 @@ import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import store from './src/store';
 
-import Home from './src/screens/containers/home';
-import Contact from './src/screens/containers/contact';
+//import Home from './src/screens/containers/home';
+//import Contact from './src/screens/containers/contact';
+
+import AppNavigatorWithState from './src/app-navigator-with-state'; 
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -13,7 +15,7 @@ export default class App extends Component<Props> {
       <Provider
         store={store}
       >
-        { true ? <Home /> : <Contact /> }
+        <AppNavigatorWithState />
       </Provider>
     );
   }
