@@ -16,7 +16,8 @@ function GeneralLayout(props) {
 
 const styles = StyleSheet.create({
 	container:{
-		flex:1
+		flex:1,
+    backgroundColor:'#5c9fd6'
 	}
 });
 

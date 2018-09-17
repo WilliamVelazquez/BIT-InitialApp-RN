@@ -4,12 +4,13 @@ import {
 	Text,
 	View,
 	TextInput,
+  ScrollView,
 	StyleSheet
 } from 'react-native';
 
 function UserContactInfoForm(props) {
  	return(
- 		<View style={styles.container}>
+ 		<ScrollView contentContainerStyle={styles.container}>
 	 		<TextInput 
 				placeholder="Ingresa tu nombre o el de tu empresa"
 				autoCorrect={false}
@@ -42,7 +43,7 @@ function UserContactInfoForm(props) {
 					044-55-1850-2736
 				</Text>
 			</View>
- 		</View>
+ 		</ScrollView>
  	)
 }
 
@@ -62,13 +63,15 @@ const styles = StyleSheet.create({
 		//borderColor:'#eaeaea'
 	},
   text:{
-    fontSize:22,
+    fontSize:18,
     marginVertical:10,
     textAlign:'justify',
     marginBottom: 15
   },
   phone:{
-    textAlign:'center'
+    fontSize:22,
+    textAlign:'center',
+    fontWeight:'bold'
   }
 });
 
