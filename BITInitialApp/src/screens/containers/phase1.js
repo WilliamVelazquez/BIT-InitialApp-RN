@@ -2,11 +2,19 @@
 import React, {Component} from 'react';
 
 import Phase1Layout from '../components/phase1-layout';
-import Header from '../../sections/components/header';
+//import Header from '../../sections/components/header';
+import GeneralHeader from '../../sections/components/general-header';
+
 // import Phase1Content from '../../phases/phase1-content';
 // import Loader from '../../sections/components/loader';
 
 class Phase1 extends Component{
+	static navigationOptions = ({navigation}) => {
+    return {
+      header: <GeneralHeader sectionTitle="Inversión Inicial" withBack={true} handleBack={()=>{navigation.goBack()}}/>
+    }
+  };
+
 	state={
 		initialInvestment: 0,
 		initialInvestmentAvailable: false

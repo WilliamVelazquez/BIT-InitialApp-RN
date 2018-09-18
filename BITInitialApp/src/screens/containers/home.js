@@ -18,10 +18,15 @@ class Home extends Component{
     this.focus.remove();
   }
   */
+  static navigationOptions = () => {
+    return {
+      header: <Header sectionTitle="BIT Consulting"/>
+    }
+  };
 
 	handlePress = () => {
     //console.log(this.props.navigation);
-    this.props.navigation.navigate('Phase1');
+    this.props.navigation.navigate('ProjectInfo');
 	};
 
 	render() {

@@ -5,8 +5,8 @@ import {
 	StyleSheet
 } from 'react-native';
 
-function GeneralLayout(props) {
-	//console.log("GeneralntactLayout", props);
+function GeneralBlueLayout(props) {
+	console.log("GeneralntactLayout", props);
 	return(
 		<ScrollView style={styles.container}>
 			{props.children}
@@ -17,8 +17,8 @@ function GeneralLayout(props) {
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
-    backgroundColor:'white'
+    backgroundColor:'#5c9fd6'
 	}
 });
 
-export default GeneralLayout;
+export default GeneralBlueLayout;

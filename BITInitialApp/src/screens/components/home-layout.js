@@ -28,7 +28,8 @@ function HomeLayout(props) {
         </Text>
         <Button 
           title="Comenzar"
-          color="#57D843"
+          //color="#57D843"
+          color="#2ecc71"
           onPress={props.handlePress} 
           accessibilityLabel="Comenzar el proceso"
         />
