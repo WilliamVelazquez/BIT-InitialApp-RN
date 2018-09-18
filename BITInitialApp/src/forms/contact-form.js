@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {
 	Text,
 	View,
+  Linking,
   CheckBox,
   TextInput,
   TouchableOpacity,
@@ -54,11 +55,25 @@ class ContactForm extends Component{
     this.props.navigation.navigate('Main');
   }
 
+  callNumber = () =>{
+    //let phoneNumber=`tel:+52${user.number}`;
+    let phoneNumber="tel:+5215518502736";
+
+    Linking.canOpenURL(phoneNumber).then(supported => {
+      if (!supported) {
+        console.log('Can\'t handle phoneNumber: ' + phoneNumber);
+      } else {
+        return Linking.openURL(phoneNumber);
+      }
+    })
+    .catch(err => console.error('An error occurred', err));
+  }
+
   render() {
    	return(
    		<ScrollView contentContainerStyle={styles.container}>
   	 		<TextInput 
-          placeholder="Ingresa tu nombre o el de tu empresa"
+          placeholder="Nombre o el de tu empresa"
           autoCorrect={false}
           autoCapitalize="words"
           style={styles.input}
@@ -75,7 +90,7 @@ class ContactForm extends Component{
   			/>
         <TextInput 
           ref={(input) => this.emailInput = input}
-          placeholder="Ingresa tu correo electrónico"
+          placeholder="Correo electrónico"
           autoCorrect={false}
           autoCapitalize="none"
           style={styles.input}
@@ -92,7 +107,7 @@ class ContactForm extends Component{
         />
         <TextInput 
           ref={(input) => this.phoneInput = input}
-          placeholder="Ingresa tu número telefónico"
+          placeholder="Número telefónico a 10 dígitos  *(Opcional)"
           autoCorrect={false}
           style={styles.input}
           placeholderTextColor="white"
@@ -108,7 +123,7 @@ class ContactForm extends Component{
         />
         <TextInput 
           ref={(input) => this.commentsInput = input}
-          placeholder="Ingresa alguna observación o comentario *(Opcional)"
+          placeholder="Observaciones o comentarios  *(Opcional)"
           multiline={true}
           autoCorrect={false}
           autoCapitalize="sentences"
@@ -135,11 +150,15 @@ class ContactForm extends Component{
         </View>
 
   			<Text style={styles.text}>
-  				También puedes llamarnos al teléfono:
+  				También puedes contactarnos al teléfono:
   			</Text>
   			<View>
-  				<Text style={[styles.text, styles.phone]}>
-  					044-55-1850-2736
+  				<Text 
+            style={[styles.text, styles.phone]}
+            onPress={this.callNumber}
+            //onPress={()=> this.callNumber(`tel:+91${user.number}`)}
+          >
+  					+52 55 1850 2736
   				</Text>
   			</View>
 
@@ -171,9 +190,10 @@ const styles = StyleSheet.create({
 	input:{
 		padding:15,
 		fontSize:15,
-    backgroundColor: 'rgba(255,255,255,0.2)',
     marginBottom: 15,
-    color:'white'
+    color:'white',
+    borderRadius: 10,
+    backgroundColor: 'rgba(255,255,255,0.2)'
 		//borderWidth:1,
     //borderColor:'#5c9fd6'
 		//borderColor:'#eaeaea'
@@ -185,13 +205,17 @@ const styles = StyleSheet.create({
     fontSize:18,
     marginVertical:10,
     textAlign:'justify',
-    marginBottom: 10,
+    marginBottom: 5,
     color: 'white'
   },
   phone:{
     fontSize:22,
     textAlign:'center',
-    fontWeight:'bold'
+    fontWeight:'bold',
+    marginBottom: 15,
+    textShadowColor:'rgba(0, 0, 0, 0.75)',
+    textShadowOffset:{width: -1, height: 1},
+    textShadowRadius:10
   },
   check:{
     color:'white',

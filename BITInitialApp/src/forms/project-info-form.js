@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
     //backgroundColor: 'rgba(255,255,255,0.2)',
     marginBottom: 15,
     color: '#2c3e50',
-    backgroundColor: '#ecf0f1',
-    borderRadius: 10
+    borderRadius: 10,
+    backgroundColor: '#ecf0f1'
     //color:'white'
 	},
   textArea:{
