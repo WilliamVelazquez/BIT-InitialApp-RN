@@ -160,7 +160,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginHorizontal:5,
     marginTop: 25,
-    backgroundColor: '#2980b9'
+    backgroundColor: '#029343'
+    //backgroundColor: '#2980b9'
   },
   btnText:{
     color:'#fff',

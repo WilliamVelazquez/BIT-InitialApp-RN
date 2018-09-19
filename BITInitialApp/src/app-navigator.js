@@ -37,6 +37,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: Main,
       navigationOptions: {
         title: 'Evaluación del Proyecto',
+        tabBarAccessibilityLabel:'Evaluación del Proyecto',
         tabBarIcon: <Icon icon="📊"/>,
       }
     },
@@ -44,14 +45,26 @@ const TabNavigator = createBottomTabNavigator(
       screen: Contact,
       navigationOptions: {
         title: 'Contacto',
+        tabBarAccessibilityLabel:'Contacto',
         tabBarIcon: <Icon icon="📋"/>,
       }
     }
   },
   {
     tabBarOptions: {
-      activeTintColor: 'white',
-      activeBackgroundColor: '#5c9fd6'
+      //activeTintColor: 'black',
+      pressOpacity: true,
+      labelStyle:{
+        fontSize:14,
+        fontWeight:'bold'
+      },
+      inactiveTintColor:'white',
+      inactiveBackgroundColor:'#0A73ED',
+      activeTintColor:'white',
+      activeBackgroundColor:'#052A4F'
+      //activeBackgroundColor: '#F1C40F'
+      //activeBackgroundColor: '#0A73ED'
+      //activeBackgroundColor: '#5c9fd6'
     },
     initialRouteName: 'Main'
   }

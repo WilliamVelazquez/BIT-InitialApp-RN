@@ -17,7 +17,8 @@ function GeneralBlueLayout(props) {
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
-    backgroundColor:'#5c9fd6'
+    backgroundColor:'#0A73ED'
+    //backgroundColor:'#5c9fd6'
 	}
 });
 

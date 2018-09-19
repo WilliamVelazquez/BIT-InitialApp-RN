@@ -8,12 +8,15 @@ import {
 	StyleSheet
 } from 'react-native';
 
+import List from '../../sections/components/list';
+
 function HomeLayout(props) {
 	return(
 		<View style={styles.container}>
       <StatusBar
        barStyle="light-content"
-       backgroundColor="#5c9fd6"
+       backgroundColor="#0A73ED"
+       //backgroundColor="#5c9fd6"
       />
       <View style={styles.content}>
         <Text style={styles.text}>
@@ -22,14 +25,20 @@ function HomeLayout(props) {
           en funcionamiento.
         </Text>
         <Text style={[styles.text, styles.marginBottom]}>
-          Al finalizar el análisis obtendrás el Valor Presente Neto, 
-          el Índice de Valor Presente, la Tasa Interna de Retorno
-          y el Periodo de Recuperación de la Inversión de tu proyecto.
+          Al finalizar el análisis obtendrás:
         </Text>
+        <List 
+          items={[
+            {key:'Valor Presente Neto'},
+            {key:'Índice de Valor Presente'},
+            {key:'Tasa Interna de Retorno'},
+            {key:'Periodo de Recuperación de la Inversión'}
+          ]} />
         <Button 
           title="Comenzar"
+          color="#029343"
+          //color="#2ecc71"
           //color="#57D843"
-          color="#2ecc71"
           onPress={props.handlePress} 
           accessibilityLabel="Comenzar el proceso"
         />
@@ -47,7 +56,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     //alignItems:'center',
     paddingHorizontal:20,
-    //paddingVertical:10
+    paddingVertical:40
   },
   text:{
     //padding:15,

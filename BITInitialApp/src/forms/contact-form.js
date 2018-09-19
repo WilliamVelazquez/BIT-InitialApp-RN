@@ -228,10 +228,13 @@ const styles = StyleSheet.create({
     alignItems:'center',
     padding: 10,
     marginHorizontal:5,
-    backgroundColor: '#2980b9'
+    backgroundColor: '#F1C40F'
+    //backgroundColor: '#052A4F'
+    //backgroundColor: '#2980b9'
   },
   btnText:{
-    color:'#fff',
+    //color:'#fff',
+    color:'#052A4F',
     fontWeight:'bold',
     fontSize:25
   }
