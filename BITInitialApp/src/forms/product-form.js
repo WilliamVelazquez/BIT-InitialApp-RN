@@ -10,48 +10,48 @@ import {
 	StyleSheet
 } from 'react-native';
 
-class InitialInvestmentForm extends Component{
+class ProductForm extends Component{
   state = {
-    supplies:0,
-    rent:0,
-    services:0,
-    permits:0,
-    paysheet:0
+    cost:0,
+    price:0,
+    monthlyExpectedSales:0,
+    monthlyExpectedSalesGrowthRate:0,
+    profitRate:0
   }
 
-  changeSupplies = (supplies) => {
+  changeCost = (cost) => {
     this.setState({
-      supplies:parseFloat(supplies)
+      cost:parseFloat(cost)
     });
   }
 
-  changeRent = (rent) => {
+  changePrice = (price) => {
     this.setState({
-      rent:parseFloat(rent)
+      price:parseFloat(price)
     });
   }
 
-  changeServices = (services) => {
+  changeMonthlyExpectedSales = (monthlyExpectedSales) => {
     this.setState({
-      services:parseFloat(services)
+      monthlyExpectedSales:parseFloat(monthlyExpectedSales)
     });
   }
 
-  changePermits = (permits) => {
+  changeMonthlyExpectedSalesGrowthRate = (monthlyExpectedSalesGrowthRate) => {
     this.setState({
-      permits:parseFloat(permits)
+      monthlyExpectedSalesGrowthRate:parseFloat(monthlyExpectedSalesGrowthRate)
     });
   }
 
-  changePaysheet = (paysheet) => {
+  changeProfitRate = (profitRate) => {
     this.setState({
-      paysheet:parseFloat(paysheet)
+      profitRate:parseFloat(profitRate)
     });
   }
 
   handlePress = () => {
     console.log(this.state);
-    this.props.navigation.navigate('Product');
+    this.props.navigation.navigate('Phase1');
   }
 
   render() {
@@ -60,7 +60,7 @@ class InitialInvestmentForm extends Component{
         <View style={styles.rowContainer}>
           <Text style={styles.moneySymbol}>$ </Text>
     	 		<TextInput 
-            placeholder="Insumos"
+            placeholder="Costo del producto/servicio"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
@@ -68,85 +68,84 @@ class InitialInvestmentForm extends Component{
             underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="numeric"
-            value={this.state.supplies}
-            onChangeText={this.changeSupplies}
-            onSubmitEditing={() => this.rentInput.focus()}
+            value={this.state.cost}
+            onChangeText={this.changeCost}
+            onSubmitEditing={() => this.priceInput.focus()}
     			/>
         </View>
         <View style={styles.rowContainer}>
           <Text style={styles.moneySymbol}>$ </Text>
           <TextInput 
-            ref={(input) => this.rentInput = input}
-            placeholder="Renta + Equipo para operar"
+            ref={(input) => this.priceInput = input}
+            placeholder="Precio del producto/servicio"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
             underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="numeric"
-            value={this.state.rent}
-            onChangeText={this.changeRent}
-            onSubmitEditing={() => this.servicesInput.focus()}
+            value={this.state.price}
+            onChangeText={this.changePrice}
+            onSubmitEditing={() => this.monthlyExpectedSalesInput.focus()}
           />
         </View>
+        <Text style={styles.text}>
+          Valores esperados
+        </Text>
         <View style={styles.rowContainer}>
           <Text style={styles.moneySymbol}>$ </Text>
           <TextInput 
-            ref={(input) => this.servicesInput = input}
-            placeholder="Servicios (Agua, luz, etc.)"
+            ref={(input) => this.monthlyExpectedSalesInput = input}
+            placeholder="Ventas mensuales"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
             underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="numeric"
-            value={this.state.services}
-            onChangeText={this.changeServices}
-            onSubmitEditing={() => this.permitsInput.focus()}
+            value={this.state.monthlyExpectedSales}
+            onChangeText={this.changeMonthlyExpectedSales}
+            onSubmitEditing={() => this.monthlyExpectedSalesGrowthRateInput.focus()}
           />
         </View>
         <View style={styles.rowContainer}>
-          <Text style={styles.moneySymbol}>$ </Text>
+          <Text style={styles.moneySymbol}>% </Text>
           <TextInput 
-            ref={(input) => this.permitsInput = input}
-            placeholder="Permisos legales"
+            ref={(input) => this.monthlyExpectedSalesGrowthRateInput = input}
+            placeholder="Tasa de crecimiento mensual"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
             underlineColorAndroid="transparent"
             returnKeyType="next"
             keyboardType="numeric"
-            value={this.state.permits}
-            onChangeText={this.changePermits}
-            onSubmitEditing={() => this.paysheetInput.focus()}
+            value={this.state.monthlyExpectedSalesGrowthRate}
+            onChangeText={this.changeMonthlyExpectedSalesGrowthRate}
+            onSubmitEditing={() => this.profitRateInput.focus()}
           />
         </View>
         <View style={styles.rowContainer}>
-          <Text style={styles.moneySymbol}>$ </Text>
+          <Text style={styles.moneySymbol}>% </Text>
           <TextInput 
-            ref={(input) => this.paysheetInput = input}
-            placeholder="Nómina"
+            ref={(input) => this.profitRateInput = input}
+            placeholder="Porcentaje de ganancias"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
             underlineColorAndroid="transparent"
             returnKeyType="done"
             keyboardType="numeric"
-            value={this.state.paysheet}
-            onChangeText={this.changePaysheet}
+            value={this.state.profitRate}
+            onChangeText={this.changeProfitRate}
             //onSubmitEditing={this.handlePress}
           />
         </View>
 
-        {/*<Text style={styles.text}>$ 0 000 000.00</Text>*/}
-        <Text style={styles.text}>
-          {`$ ${(this.state.supplies+this.state.rent+this.state.services+this.state.permits+this.state.paysheet).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`}
-        </Text>
         <TouchableOpacity
           style={styles.btn}
           onPress={this.handlePress}
          >
-          <Text style={styles.btnText}>Continuar</Text>
+          <Text style={styles.btnText}>Comenzar análisis</Text>
         </TouchableOpacity>
 
    		</ScrollView>
@@ -169,7 +168,7 @@ const styles = StyleSheet.create({
 	input:{
     flex: 1,
 		padding:15,
-		fontSize:25,
+		fontSize:23,
     //backgroundColor: 'rgba(255,255,255,0.2)',
     marginBottom: 14,
     color: '#2c3e50',
@@ -215,4 +214,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default InitialInvestmentForm;
+export default ProductForm;

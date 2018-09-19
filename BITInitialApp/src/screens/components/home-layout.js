@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   text:{
     //padding:15,
-    fontSize:20,
+    fontSize:21,
     marginVertical:10,
     textAlign:'justify',
     marginBottom: 15

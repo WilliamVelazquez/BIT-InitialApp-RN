@@ -23,8 +23,9 @@ function List(props){
 const styles = StyleSheet.create({
   text:{
     //padding:15,
-    fontSize:20,
+    fontSize:21,
     marginLeft:15,
+    //fontWeight:'bold'
     //textAlign:'justify',
     //marginBottom: 5
   }
