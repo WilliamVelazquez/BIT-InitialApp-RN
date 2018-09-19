@@ -44,13 +44,13 @@ class ProjectInfoForm extends Component{
 
   handlePress = () => {
     console.log(this.state);
-    this.props.navigation.navigate('Phase1');
+    this.props.navigation.navigate('InitialInvestment');
   }
 
   render() {
    	return(
    		<ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.text}>La siguiente información nos dará un panorama general de tu proyecto</Text>
+        <Text style={styles.text}>Ingresa la siguiente información:</Text>
   	 		<TextInput 
           placeholder="Nombre del Proyecto/Empresa"
           autoCapitalize="sentences"
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     //alignItems:'center',
     paddingHorizontal:20,
-    paddingVertical:20
+    paddingVertical:10
   },
   rowContainer:{
     flexDirection:'row',

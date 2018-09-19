@@ -7,6 +7,7 @@ import {
 
 import Home from './screens/containers/home';
 import ProjectInfo from './screens/containers/project-info';
+import InitialInvestment from './screens/containers/initial-investment';
 import Phase1 from './screens/containers/phase1';
 import Contact from './screens/containers/contact';
 import Icon from './sections/components/icon';
@@ -16,6 +17,7 @@ const Main = createStackNavigator(
   {
     Home,//Home:Home
     ProjectInfo,
+    InitialInvestment,
     Phase1
   },
   {

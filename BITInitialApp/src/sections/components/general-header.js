@@ -20,7 +20,7 @@ function GeneralHeader(props) {
             style={styles.backBtn}
             onPress={props.handleBack}
            >
-            <Text style={styles.backText}>{`<`}</Text>
+            <Text style={styles.backText}>{`<`/*≪◀⏴≺ᐸ\u27E8*/}</Text>
           </TouchableOpacity>
         }
         <Text style={styles.title}>{props.sectionTitle}</Text>
