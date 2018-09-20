@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     //padding:15,
     fontSize:21,
     marginLeft:15,
-    //fontWeight:'bold'
+    fontWeight:'bold'
     //textAlign:'justify',
     //marginBottom: 5
   }

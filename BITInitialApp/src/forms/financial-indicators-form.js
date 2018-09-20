@@ -12,6 +12,8 @@ import {
 
 import Loader from '../sections/components/loader';
 import IndicatorsList from '../sections/components/indicators-list';
+//import Separator from '../sections/components/vertical-separator';
+import ResultItem from '../sections/components/result-item';
 
 function FinancialIndicatorsForm (props){
   console.log(this.props);
@@ -22,30 +24,33 @@ function FinancialIndicatorsForm (props){
         <Loader />
         :
      		<ScrollView>
+
+          <ResultItem viable={true}/>
+
           <IndicatorsList 
             indicators={[
             {
               key:'VPN',
               indicator:'Valor Presente Neto',
-              value:'50',
+              value:'$ 50,000.00',
               description:'Efectivo que se genera del proyecto (dinero líquido)'
             },
             {
               key:'TIR',
               indicator:'Tasa Interna de Retorno',
-              value:'50',
+              value:'16 %',
               description:'Buena en caso de ser mayor al % de utilidad esperada'
             },
             {
               key:'IVP',
               indicator:'Índice de Valor Presente',
-              value:'50',
+              value:'20 %',
               description:'El proyecto da esta rentabilidad'
             },
             {
               key:'PRI',
               indicator:'Periodo de Recuperación de Inversión',
-              value:'50',
+              value:'7 meses',
               description:'Se recuperará en un plazo considerable'
             }
           ]}

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     fontSize:21,
     marginVertical:10,
     textAlign:'justify',
-    marginBottom: 15
+    marginBottom: 5
   },
   marginBottom:{
     marginBottom: 45

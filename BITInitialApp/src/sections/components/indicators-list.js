@@ -7,7 +7,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-import Separator from './vertical-separator';
+//import Separator from './vertical-separator';
 
 function IndicatorsList(props){
 
@@ -23,13 +23,13 @@ function IndicatorsList(props){
     </View>
   );
 
-  const ItemSeparator = () => <Separator />;
+  //const ItemSeparator = () => <Separator />;
 
   return(
     <FlatList
       data={props.indicators}
       renderItem={({ item, index }) => ListItem(item,index)}
-      ItemSeparatorComponent={ItemSeparator}
+      //ItemSeparatorComponent={ItemSeparator}
     />
   );
 }
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     borderColor: '#052A4F',
     borderRadius: 4,
     borderWidth: 4,
-    marginHorizontal:100,
+    marginHorizontal:60,
     marginBottom:5
   },
   normal:{
