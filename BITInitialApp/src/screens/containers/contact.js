@@ -10,7 +10,7 @@ class Contact extends Component{
 	render() {
 		return (
 			<GeneralBlueLayout>
-				<Header sectionTitle="Contactanos!" />
+				<Header sectionTitle="Contáctanos!" />
 				<UserContactInfoForm 
           navigation={this.props.navigation}
         />

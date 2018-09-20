@@ -51,7 +51,7 @@ class ProductForm extends Component{
 
   handlePress = () => {
     console.log(this.state);
-    this.props.navigation.navigate('Phase1');
+    this.props.navigation.navigate('FinancialIndicators');
   }
 
   render() {
