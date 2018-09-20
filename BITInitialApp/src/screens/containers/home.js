@@ -20,7 +20,7 @@ class Home extends Component{
   */
   static navigationOptions = () => {
     return {
-      header: <Header sectionTitle="BIT Consulting"/>
+      header: <Header sectionTitle="HAYDE Consulting"/>
     }
   };
 
