@@ -16,7 +16,7 @@ import IndicatorsList from '../sections/components/indicators-list';
 import ResultItem from '../sections/components/result-item';
 
 function FinancialIndicatorsForm (props){
-  console.log(this.props);
+  //console.log(this.props);
  	return(
     <View style={styles.container}>
       {

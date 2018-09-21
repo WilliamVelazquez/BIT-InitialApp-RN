@@ -77,7 +77,7 @@ class InitialInvestmentForm extends Component{
           <Text style={styles.moneySymbol}>$ </Text>
           <TextInput 
             ref={(input) => this.rentInput = input}
-            placeholder="Renta + Equipo para operar"
+            placeholder="Renta+Equipo para operar"
             autoCapitalize="none"
             autoCorrect={false}
             style={styles.input}
@@ -169,9 +169,9 @@ const styles = StyleSheet.create({
 	input:{
     flex: 1,
 		padding:15,
-		fontSize:25,
+		fontSize:20,
     //backgroundColor: 'rgba(255,255,255,0.2)',
-    marginBottom: 14,
+    marginBottom: 15,
     color: '#2c3e50',
     borderRadius: 10,
     backgroundColor: '#ecf0f1',
@@ -179,11 +179,11 @@ const styles = StyleSheet.create({
     //color:'white'
 	},
   moneySymbol:{
-    fontSize:24,
+    fontSize:20,
     fontWeight:'bold',
     //marginRight:2,
     color: '#2c3e50',
-    marginBottom: 14,
+    marginBottom: 15,
   },
   text:{
     fontSize:20,

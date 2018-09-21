@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
 	input:{
     flex: 1,
 		padding:15,
-		fontSize:23,
+		fontSize:20,
     //backgroundColor: 'rgba(255,255,255,0.2)',
     marginBottom: 14,
     color: '#2c3e50',
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     //color:'white'
 	},
   moneySymbol:{
-    fontSize:24,
+    fontSize:20,
     fontWeight:'bold',
     //marginRight:2,
     color: '#2c3e50',
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   text:{
     fontSize:20,
     fontWeight:'bold',
-    marginVertical:5,
+    marginBottom:10,
     textAlign:'center',
     marginBottom: 10,
     color: '#2c3e50'

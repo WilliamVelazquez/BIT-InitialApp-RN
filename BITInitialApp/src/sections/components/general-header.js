@@ -57,7 +57,7 @@ const styles=StyleSheet.create({
     resizeMode: 'contain'
   },
   title:{
-  	fontSize: 20,
+  	fontSize: 18,
     padding: 15,
     color: '#ffffff',
     fontWeight: 'bold'

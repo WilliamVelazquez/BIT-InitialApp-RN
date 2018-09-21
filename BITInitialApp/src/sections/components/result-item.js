@@ -9,7 +9,10 @@ import {
 function ResultItem(props){
   return(
     <View style={styles.bar}>
-      <View style={styles.indicatorValueBox}>
+      <View 
+        style={styles.indicatorValueBox}
+        onPress={props.handlePress || null}
+      >
         <Text style={[styles.text,styles.indicatorValue,(props.viable)?styles.green:styles.red]}>{props.viable?"Viable":"No viable"}</Text>
       </View>
     </View>

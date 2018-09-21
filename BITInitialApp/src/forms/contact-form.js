@@ -1,6 +1,7 @@
 //@Author William E. Velázquez Amarra - williamvelazquez.isc@gmail.com
 import React, {Component} from 'react';
 import {
+  Alert,
 	Text,
 	View,
   Linking,
@@ -52,7 +53,17 @@ class ContactForm extends Component{
 
   handlePress = () => {
     console.log(this.state);
-    this.props.navigation.navigate('Main');
+    Alert.alert(
+      'Datos enviados!',
+      '',//'My Alert Msg',
+      [
+        //{text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+        //{text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'OK', onPress: () => this.props.navigation.navigate('Main')},//console.log('OK Pressed') //{}
+      ],
+      { onDismiss: () => this.props.navigation.navigate('Main') }//{}
+      //{ cancelable: false }
+    );
   }
 
   callNumber = () =>{
@@ -73,7 +84,7 @@ class ContactForm extends Component{
    	return(
    		<ScrollView contentContainerStyle={styles.container}>
   	 		<TextInput 
-          placeholder="Nombre o el de tu empresa"
+          placeholder="Nombre"
           autoCorrect={false}
           autoCapitalize="words"
           style={styles.input}
@@ -188,7 +199,8 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
 	input:{
-		padding:15,
+		paddingHorizontal:15,
+    paddingVertical: 10,
 		fontSize:15,
     marginBottom: 15,
     color:'white',
@@ -212,6 +224,7 @@ const styles = StyleSheet.create({
     fontSize:22,
     textAlign:'center',
     fontWeight:'bold',
+    marginTop: 5,
     marginBottom: 15,
     textShadowColor:'rgba(0, 0, 0, 0.75)',
     textShadowOffset:{width: -1, height: 1},

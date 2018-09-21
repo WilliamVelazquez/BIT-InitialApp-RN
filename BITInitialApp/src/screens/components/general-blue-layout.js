@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 function GeneralBlueLayout(props) {
-	console.log("GeneralntactLayout", props);
+	//console.log("GeneralntactLayout", props);
 	return(
 		<ScrollView style={styles.container}>
 			{props.children}

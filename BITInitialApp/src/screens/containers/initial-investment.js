@@ -8,7 +8,7 @@ import InitialInvestmentForm from '../../forms/initial-investment-form';
 class InitialInvestment extends Component{
 	static navigationOptions = ({navigation}) => {
     return {
-      header: <GeneralHeader sectionTitle="Calculando la Inversión Inicial" withBack={true} handleBack={()=>{navigation.goBack()}}/>
+      header: <GeneralHeader sectionTitle="Inversión Inicial" withBack={true} handleBack={()=>{navigation.goBack()}}/>
     }
   };
 	render() {

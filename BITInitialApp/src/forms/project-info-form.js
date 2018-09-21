@@ -65,7 +65,7 @@ class ProjectInfoForm extends Component{
   			/>
         <TextInput 
           ref={(input) => this.objectiveInput = input}
-          placeholder="Misión/Objetivo del Proyecto/Empresa"
+          placeholder="Misión/Objetivo del Proyecto"
           autoCapitalize="sentences"
           autoCorrect={false}
           style={[styles.input, styles.textArea]}
