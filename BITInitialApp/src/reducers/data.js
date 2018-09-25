@@ -1,22 +1,13 @@
 //@Author William E. Velázquez Amarra - williamvelazquez.isc@gmail.com
 function data(state={}, action){
   switch(action.type){
-    case 'SET_INITIAL_INVESTMENT':{
+    case 'SET_PROJECT_VALUES':{
       return {...state, ...action.payload}
     }
-    case 'SET_SUPPLIES_COST':{
+    case 'SET_INITIAL_INVESTMENT_VALUES':{
       return {...state, ...action.payload};
     }
-    case 'SET_PAYSHEET_COST':{
-      return {...state, ...action.payload};
-    }
-    case 'SET_RENT_COST':{
-      return {...state, ...action.payload};
-    }
-    case 'SET_WORK_PERMITS_COST':{
-    	return {...state, ...action.payload};
-    }
-    case 'SET_SERVICES_COST':{
+    case 'SET_PRODUCT_VALUES':{
       return {...state, ...action.payload};
     }
     default:

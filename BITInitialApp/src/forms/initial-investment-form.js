@@ -1,5 +1,6 @@
 //@Author William E. Velázquez Amarra - williamvelazquez.isc@gmail.com
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {
 	Text,
 	View,
@@ -51,6 +52,12 @@ class InitialInvestmentForm extends Component{
 
   handlePress = () => {
     console.log(this.state);
+    this.props.dispatch({
+      type:'SET_INITIAL_INVESTMENT_VALUES',
+      payload:{
+        initialInvestmentValues: this.state
+      }
+    });
     this.props.navigation.navigate('Product');
   }
 
@@ -215,4 +222,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default InitialInvestmentForm;
+export default connect(null)(InitialInvestmentForm);

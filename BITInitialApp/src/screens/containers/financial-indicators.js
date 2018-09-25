@@ -1,5 +1,6 @@
 //@Author William E. Velázquez Amarra - williamvelazquez.isc@gmail.com
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import GeneralLayout from '../components/general-layout';
 import GeneralHeader from '../../sections/components/general-header';
@@ -13,6 +14,7 @@ class FinancialIndicators extends Component{
   };
   handlePress = () => {
   	console.log("Completed");
+    console.log("PropsFromRedux", this.props);
   	this.props.navigation.navigate('Contact');
   }
 
@@ -28,4 +30,13 @@ class FinancialIndicators extends Component{
 	}
 }
 
-export default FinancialIndicators;
+function mapStateToProps(state) {
+  console.log("ReduxState",state);
+  return {
+    projectValues: state.data.projectValues,
+    initialInvestmentValues: state.data.initialInvestmentValues,
+    productValues: state.data.productValues
+  }
+}
+
+export default connect(mapStateToProps)(FinancialIndicators);
