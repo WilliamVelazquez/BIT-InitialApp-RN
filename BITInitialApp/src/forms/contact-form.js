@@ -12,6 +12,8 @@ import {
 	StyleSheet
 } from 'react-native';
 
+import API from '../utils/api';
+
 class ContactForm extends Component{
   state = {
     name:'',
@@ -51,8 +53,21 @@ class ContactForm extends Component{
     });
   }
 
-  handlePress = () => {
-    console.log(this.state);
+  handlePress = async () => {
+    console.log("Full Contact Data-->",this.state);
+    let {name, email, phone, comments} = this.state;
+    //let data = { cliente:'', name, email, phone, comments};
+    let data={
+      clientId:'',
+      companyName:name,
+      email,
+      phoneNumber:phone,
+      commentary:comments || "Sin observaciones"
+    };
+    console.log("Contact Data-->",data);
+
+    const saveContact= await API.saveContactInfo(data);
+    console.log("saveContact-->",saveContact);
     Alert.alert(
       'Datos enviados!',
       '',//'My Alert Msg',

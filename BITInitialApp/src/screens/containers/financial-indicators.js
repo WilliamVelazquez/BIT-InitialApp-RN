@@ -6,6 +6,8 @@ import GeneralLayout from '../components/general-layout';
 import GeneralHeader from '../../sections/components/general-header';
 import FinancialIndicatorsForm from '../../forms/financial-indicators-form';
 
+//import API from '../../utils/api';
+
 class FinancialIndicators extends Component{
 	static navigationOptions = ({navigation}) => {
     return {
@@ -31,11 +33,9 @@ class FinancialIndicators extends Component{
 }
 
 function mapStateToProps(state) {
-  console.log("ReduxState",state);
+  //console.log("ReduxState",state);
   return {
-    projectValues: state.data.projectValues,
-    initialInvestmentValues: state.data.initialInvestmentValues,
-    productValues: state.data.productValues
+    formValues: {...state.data.projectValues, ...state.data.initialInvestmentValues, ...state.data.productValues}
   }
 }
 
