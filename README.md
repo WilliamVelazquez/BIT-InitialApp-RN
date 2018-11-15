@@ -26,6 +26,10 @@ For detailed Android signed APK follow the [guide](https://facebook.github.io/re
 
 ## Screenshots
 
-![Home](./.readme-static/Home.jpg) ![Initial Investment](./.readme-static/InitialInvestment.jpg)
-![Project](./.readme-static/Project.jpg) ![Service or Product](./.readme-static/ServiceProduct.jpg)
-![Results](./.readme-static/Results.jpg) ![Contact Form](./.readme-static/Contact.jpg)
+<img alt="Home" align="center" width="280" src="./.readme-static/Home.jpg" />
+<img alt="Initial Investment" align="center" width="280" src="./.readme-static/InitialInvestment.jpg" />
+<img alt="Project" align="center" width="280" src="./.readme-static/Project.jpg" />
+
+<img alt="Service or Product" align="center" width="280" src="./.readme-static/ServiceProduct.jpg" />
+<img alt="Results" align="center" width="280" src="./.readme-static/Results.jpg" />
+<img alt="Contact Form" align="center" width="280" src="./.readme-static/Contact.jpg" />
